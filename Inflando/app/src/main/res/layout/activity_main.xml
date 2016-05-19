@@ -24,8 +24,9 @@
         android:text="Calcula Longuitud"
         android:id="@+id/button"
         android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+
     <EditText
-        android:layout_width="157dp"
+        android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:layout_below="@+id/textView2"
@@ -39,4 +40,11 @@
                     android:orientation="horizontal">
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:id="@+id/botonSalir"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

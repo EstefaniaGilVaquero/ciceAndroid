@@ -26,40 +26,49 @@ public class EscuchaBoton implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        Log.d(getClass().getCanonicalName(), "Ha tocado el botón");
-
-        Activity a = (Activity)ct;
-
-        EditText editText = (EditText)a.findViewById(R.id.editText);
-
-        String nombre = editText.getText().toString();
-
-        Log.d(getClass().getCanonicalName(), "Ha introducido el nombre = " + nombre);
-
-        String mensaje = StringUtil.mensajeSalida(nombre);
+        Activity a = (Activity) ct;
 
 
+        //Si toca boton calcular
+       if(v.getId() == R.id.button) {
 
 
-        ViewGroup caja_resultado = (ViewGroup)a.findViewById(R.id.resultado);
-
-        if (caja_resultado.getChildCount()>0) //la lista ya ha sido inflada
-        {
-            TextView text = (TextView)a.findViewById(R.id.mensaje_salida);
-            text.setText(mensaje);
-
-        } else {
+            Log.d(getClass().getCanonicalName(), "Ha tocado el botón calcular");
 
 
-            LayoutInflater layoutInflater = a.getLayoutInflater(); //o LayoutInflater.from(a)
-            View vista_inflada = layoutInflater.inflate(R.layout.mensaje_salida,caja_resultado);
-            TextView text = (TextView)vista_inflada.findViewById(R.id.mensaje_salida);
-            text.setText(mensaje);
+            EditText editText = (EditText) a.findViewById(R.id.editText);
 
-        }
+            String nombre = editText.getText().toString();
+
+            Log.d(getClass().getCanonicalName(), "Ha introducido el nombre = " + nombre);
+
+            String mensaje = StringUtil.mensajeSalida(nombre);
 
 
-       mostrarLayout(a.findViewById(R.id.principal_layout));
+            ViewGroup caja_resultado = (ViewGroup) a.findViewById(R.id.resultado);
+
+            if (caja_resultado.getChildCount() > 0) //la lista ya ha sido inflada
+            {
+                TextView text = (TextView) a.findViewById(R.id.mensaje_salida);
+                text.setText(mensaje);
+
+            } else {
+                LayoutInflater layoutInflater = a.getLayoutInflater(); //o LayoutInflater.from(a)
+                View vista_inflada = layoutInflater.inflate(R.layout.mensaje_salida, caja_resultado);
+                TextView text = (TextView) vista_inflada.findViewById(R.id.mensaje_salida);
+                text.setText(mensaje);
+            }
+            mostrarLayout(a.findViewById(R.id.principal_layout));
+
+        //Si toca boton salir
+      }else if(v.getId() == R.id.botonSalir){
+            //salir
+           System.out.println("Salgo");
+          a.finish();
+      }
+
+
+
 
     }
 
