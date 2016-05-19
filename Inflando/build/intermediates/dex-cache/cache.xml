@@ -5,7 +5,7 @@
         jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="59ef2e06e27b2c1eb10a635f3ebe7c42d7e970ba">
+        sha1="0d2e25dd430f2854e45f6728a9ee57086d7be760">
         <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_8790c43c231bbc66e33ef3e64d6034bc11046a8d.jar" />
     </item>
     <item
@@ -33,7 +33,7 @@
         jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="6b59a25842c83a757ebe760844bce21c1050123c">
+        sha1="a3ebbdea11075307696065817e4a0b934ac35699">
         <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\instant-run_14ebb47670aadf7e3f376efec651dea4c659fd42.jar" />
     </item>
     <item

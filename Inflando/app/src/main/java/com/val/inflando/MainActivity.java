@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(escuchaBoton);
         botonSalir.setOnClickListener(escuchaBoton);
 
+        //Log.d(getClass().getCanonicalName(),R.string.app_name);
+
 
     }
 
