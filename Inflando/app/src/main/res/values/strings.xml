@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Inflando</string>
+    <string name="botonSalir">Salir</string>
+    <string name="textView2">INTRODUZCA SU NOMBRE</string>
 </resources>

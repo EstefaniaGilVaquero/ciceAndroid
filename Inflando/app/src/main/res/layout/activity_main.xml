@@ -10,28 +10,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.val.inflando.MainActivity">
+    tools:context="com.val.inflando.MainActivity"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INTRODUZCA SU NOMBRE" android:id="@+id/textView2"
-        android:layout_marginTop="38dp" android:layout_alignParentTop="true"
+        android:text="@string/textView2"
+        android:id="@+id/textView2"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calcula Longuitud"
         android:id="@+id/button"
-        android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="56dp" android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" android:layout_alignRight="@+id/textView2"
+        android:layout_marginTop="56dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignRight="@+id/textView2"
         android:layout_alignEnd="@+id/textView2"/>
 
     <LinearLayout   android:layout_width="wrap_content"
@@ -42,9 +48,9 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/botonSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salir"
-        android:id="@+id/botonSalir"
+        android:text="@string/botonSalir"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
