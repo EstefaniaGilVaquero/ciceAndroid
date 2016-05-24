@@ -2,6 +2,7 @@ package com.val.intentando;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -43,6 +44,7 @@ public class EscuchaEventos implements View.OnClickListener {
             a = (Activity)context; //Casting Context a Activity, para poder obtener referencia los objetos
             caja_texto = (EditText) a.findViewById(R.id.caja_texto_busqueda); //obtengo la caja de texto
             cadena_buqueda = caja_texto.getText().toString();//extraigo su contenido, el término de búsqueda
+            caja_texto.setText("");//Borro la caja de texto
 
         return cadena_buqueda;
     }
@@ -51,7 +53,7 @@ public class EscuchaEventos implements View.OnClickListener {
      * Método principal de la clase, que será invocado a modo de callback cuando los objetos
      * de la interfaz de usuario sean seleccioandos
      *
-     * @param vista_seleccioanda El obejto visual que ha recibido el click
+     * @param vista_seleccioanda El objeto visual que ha recibido el click
      */
 
     @Override
@@ -61,14 +63,17 @@ public class EscuchaEventos implements View.OnClickListener {
 
         Log.d(getClass().getCanonicalName(), "El usuario ha tocado un botón");
 
-
+        String termino_busqueda = obtenerCadenaDeBusqueda();
         switch (id_vista_seleccionada)
         {
             case R.id.botonbuscarengoogle:
                 Log.d(getClass().getCanonicalName(), "El usuario ha tocado el botón de buscar en Google");
-                String termino_busqueda = obtenerCadenaDeBusqueda();
                 Accion.buscarEnGoogle(context, termino_busqueda);
-            break;
+            case R.id.buttonCompartir:
+                Log.d(getClass().getCanonicalName(), "El usuario ha tocado el botón de compartir en wasapp");
+                Accion.compartirWasApp(context, termino_busqueda);
+
+                break;
         }
 
     }
