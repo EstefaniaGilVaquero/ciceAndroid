@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         boton_busqueda.setOnClickListener(objeto_escuchador);
         Button boton_compartir = (Button)findViewById(R.id.buttonCompartir);
         boton_compartir.setOnClickListener(objeto_escuchador);
+        Button boton_nuevaActividad = (Button)findViewById(R.id.botonActividad);
+        boton_nuevaActividad.setOnClickListener(objeto_escuchador);
 
         Log.d(getClass().getCanonicalName(), "Listener instanciados y asociados");
 

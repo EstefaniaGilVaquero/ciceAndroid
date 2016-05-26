@@ -29,6 +29,7 @@ public class Accion {
 
         Uri uri = null;
 
+
             Log.d(Accion.class.getCanonicalName(), "Preparando la búsqueda");
 
             url = PREFIJO_URI_BUSCA_GOOGLE + cadena_busqueda;//Compongo la cadena
@@ -38,6 +39,7 @@ public class Accion {
 
             Log.d(Accion.class.getCanonicalName(), "Lanzando el intent de búsqueda");
             a.startActivity(intent);//lanzo la actividad - INTENT IMPLÍCITO (describo la acción de forma general)
+
 
     }
 
@@ -53,6 +55,21 @@ public class Accion {
 
         Log.d(Accion.class.getCanonicalName(), "Lanzando el intent de conpartir");
         a.startActivity(intent);
+
+    }
+
+    public static void nuevaActividad (Context context, String cadena_busqueda)
+    {
+        Activity a = null;
+
+        /**
+         * Creo un intent, le meto el texto y se lo paso
+         */
+
+        Intent intent1 = new Intent(context, Main2Activity.class);
+        intent1.putExtra("NOMBRE", cadena_busqueda);
+        a = (Activity) context; //Subcasting (De clase Padre a hija)
+        a.startActivity(intent1);
 
     }
 }

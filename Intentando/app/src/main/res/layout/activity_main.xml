@@ -26,4 +26,11 @@
         android:id="@+id/buttonCompartir"
         android:layout_gravity="center_horizontal"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nuevaActividad"
+        android:id="@+id/botonActividad"
+        android:layout_gravity="center_horizontal"/>
+
 </LinearLayout>

@@ -72,6 +72,9 @@ public class EscuchaEventos implements View.OnClickListener {
             case R.id.buttonCompartir:
                 Log.d(getClass().getCanonicalName(), "El usuario ha tocado el botón de compartir en wasapp");
                 Accion.compartirWasApp(context, termino_busqueda);
+            case R.id.botonActividad:
+                Log.d(getClass().getCanonicalName(), "El usuario ha tocado el botón de nuevaActividad");
+                Accion.nuevaActividad(context, termino_busqueda);
 
                 break;
         }
