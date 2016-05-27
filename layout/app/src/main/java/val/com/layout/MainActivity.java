@@ -26,15 +26,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String obtenerDensidad (Context context)
-    { String densidad = "";
+    {
+        String densidad = "";
         switch (context.getResources().getDisplayMetrics().densityDpi) {
             case DisplayMetrics.DENSITY_LOW: densidad = "ldpi";
+                break;
             case DisplayMetrics.DENSITY_MEDIUM: densidad = "mdpi";
+                break;
             case DisplayMetrics.DENSITY_HIGH: densidad = "hdpi";
+                break;
             case DisplayMetrics.DENSITY_XHIGH: densidad = "xhdpi";
+                break;
             case DisplayMetrics.DENSITY_XXHIGH: densidad = "xxhdpi";
+                break;
             case DisplayMetrics.DENSITY_XXXHIGH: densidad = "xxxhdpi";
-            default: densidad = "defecto"; }
+                break;
+            default: densidad = "defecto";
+        }
         return densidad;
     }
 }
