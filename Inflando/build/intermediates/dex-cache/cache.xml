@@ -1,3 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="66c4aefac9553d94c64181b07fa9311c71da0d6a">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_8790c43c231bbc66e33ef3e64d6034bc11046a8d.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_2ed0ffb9c7b8cc0e93d7448a37d6e19679e1d14d.jar" />
+    </item>
+    <item
+        jar="C:\Users\estefi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_d5e7088cd7fc5a28144e4a66ed3eef327f504fef.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_35a1daf1ba1eb542e84023129aeea2c917dfecae.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c523aeddd8866c4fe0c4f6113e6b1979b8da36a4">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\instant-run_14ebb47670aadf7e3f376efec651dea4c659fd42.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_e52c159b4dab67c45c2383542c29d69a610340a1.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_69c81cae4dcb91eefe023dc8b8932472f39aa667.jar" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\Inflando\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_a537dfac43e195f30dd67a329c4fe41bf6d834b0.jar" />
+    </item>
+
+</items>

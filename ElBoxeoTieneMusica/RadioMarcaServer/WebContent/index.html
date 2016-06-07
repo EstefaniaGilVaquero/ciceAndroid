@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>VAMOS CON OTRO PROGRAMILLA, CHAMP</title>
+</head>
+<body>
+	<form action="/RadioMarcaServer/ProcesarSubida" enctype="multipart/form-data" method="post">
+		<label for = "file"> Audio del programa: </label><input type="file" name="file" id = " file" required/><br/><br/>
+		<label for = "date"> Fecha: </label>  <input type="date" name="date" id = "date" placeholder="AAAA-MM-DD" required="required"/><br/><br/>
+		<label for = "destino">Destino:</label> <input type="text" name="destino" id= "destino" required="required"/><br/><br/>
+		<input type="checkbox" name="notify" value="notify"/> Notificar a los usuarios <br/><br/>
+		<input type = "submit" value = "Subir"/>
+	</form>
+</body>
+</html>
