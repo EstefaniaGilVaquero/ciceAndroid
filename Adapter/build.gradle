@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:2.1.2'
         // http://mvnrepository.com/artifact/com.google.code.gson/gson
         //compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
 

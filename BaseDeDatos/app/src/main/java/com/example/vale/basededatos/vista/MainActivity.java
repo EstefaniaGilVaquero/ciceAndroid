@@ -27,9 +27,18 @@ public class MainActivity extends AppCompatActivity {
         Persona persona3 = new Persona(3, "Manolo");
 
         //inserto las personas
-        baseDatosCochesPersona.insertarPersona(persona1);
-        baseDatosCochesPersona.insertarPersona(persona2);
-        baseDatosCochesPersona.insertarPersona(persona3);
+       if ( baseDatosCochesPersona.buscarId(String.valueOf(persona1.getId())).equals("0")){
+           baseDatosCochesPersona.insertarPersona(persona1);
+       }
+
+
+        if ( baseDatosCochesPersona.buscarId(String.valueOf(persona2.getId())).equals("0")){
+            baseDatosCochesPersona.insertarPersona(persona1);
+        }
+
+        if ( baseDatosCochesPersona.buscarId(String.valueOf(persona3.getId())).equals("0")){
+            baseDatosCochesPersona.insertarPersona(persona1);
+        }
 
         Coche coche1 = new Coche("Ferrari", persona2);
         Coche coche2 = new Coche("Renault", persona2);

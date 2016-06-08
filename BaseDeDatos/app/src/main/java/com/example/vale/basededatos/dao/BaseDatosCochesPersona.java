@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.vale.basededatos.dto.Coche;
 import com.example.vale.basededatos.dto.Persona;
@@ -56,6 +57,7 @@ public class BaseDatosCochesPersona extends SQLiteOpenHelper {
     {
 
         SQLiteDatabase database = this.getWritableDatabase();
+
         database.execSQL("INSERT INTO PERSONA (id, nombre) VALUES ("+ persona.getId()+" , '"+ persona.getNombre()+"')");
         this.cerrarBaseDatos(database);
 
@@ -67,6 +69,22 @@ public class BaseDatosCochesPersona extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase();
         database.execSQL("INSERT INTO COCHE (modelo, idpersona) VALUES ('"+coche.getModelo()+"' , "+coche.getPersona().getId()+")");
         this.cerrarBaseDatos(database);
+    }
+
+    public String buscarId (String id){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        int aux_id = 0;
+        try{
+            Cursor cursor = db.rawQuery("SELECT id FROM PERSONA WHERE id ="+id, null);
+            aux_id = cursor.getInt(1);
+            cursor.close();
+        } catch(Exception e){
+            Log.i("El error", e.toString());
+        }
+
+        this.cerrarBaseDatos(db);
+        return String.valueOf(aux_id);
     }
 
     public Persona buscarPersona (String nombre)
