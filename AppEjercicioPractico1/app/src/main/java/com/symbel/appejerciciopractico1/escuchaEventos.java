@@ -13,7 +13,8 @@ public class escuchaEventos implements View.OnClickListener{
 
     Context context;
 
-    displayImages mostrarImagenes = new displayImages();
+    displayImages mostrarImagenes;
+
 
     public escuchaEventos(Context context){this.context = context;}
 
@@ -23,6 +24,8 @@ public class escuchaEventos implements View.OnClickListener{
     {
         //obtengo el Id de la vista
         int id_vista_seleccionada = vista_seleccioanda.getId();
+
+        //displayImages mostrarImagenes = (displayImages) this.context;
 
         Log.d(getClass().getCanonicalName(), "Ha pulsado un boton");
 
@@ -42,6 +45,7 @@ public class escuchaEventos implements View.OnClickListener{
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton SI");
                 //TODO: Guardar en un map la imagen y la respuesta
                 //mostrarImagenes.guardarEleccion(R.id.siBTN);
+                mostrarImagenes = (displayImages) this.context;
                 mostrarImagenes.nextImgae();
 
                 break;
@@ -50,6 +54,7 @@ public class escuchaEventos implements View.OnClickListener{
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton NO");
                 //TODO: Guardar en un map la imagen y la respuesta
                 //mostrarImagenes.guardarEleccion(R.id.noBTN);
+                mostrarImagenes = (displayImages) this.context;
                 mostrarImagenes.nextImgae();
                 break;
 

@@ -1,6 +1,5 @@
 package com.symbel.appejerciciopractico1;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,19 +48,17 @@ public class displayImages extends AppCompatActivity {
 
     public void nextImgae(){
 
-        Activity a = (Activity) context;
+      //  Activity a = (Activity) context;
+        ImageView imagenBici = (ImageView) findViewById(R.id.bicisView);
 
-        ImageView imagenBici = (ImageView) a.findViewById(R.id.bicisView);
-
-        if ( contadorImagenes < biciArray.length){
+        if ( contadorImagenes < biciArray.length-1){
             contadorImagenes++;
 
         }else{
             contadorImagenes = 0;
         }
 
-        imagenBici.setImageResource(R.drawable.bici_enduro);
-      //  imagenBici.setImageResource(biciArray[contadorImagenes]);
+        imagenBici.setImageResource(biciArray[contadorImagenes]);
     }
 
     public void guardarEleccion(View v){
