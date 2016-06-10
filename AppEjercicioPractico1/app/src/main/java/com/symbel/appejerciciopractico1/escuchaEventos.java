@@ -40,11 +40,16 @@ public class escuchaEventos implements View.OnClickListener{
                 break;
             case R.id.siBTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton SI");
+                //TODO: Guardar en un map la imagen y la respuesta
+                //mostrarImagenes.guardarEleccion(R.id.siBTN);
                 mostrarImagenes.nextImgae();
+
                 break;
 
             case R.id.noBTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton NO");
+                //TODO: Guardar en un map la imagen y la respuesta
+                //mostrarImagenes.guardarEleccion(R.id.noBTN);
                 mostrarImagenes.nextImgae();
                 break;
 

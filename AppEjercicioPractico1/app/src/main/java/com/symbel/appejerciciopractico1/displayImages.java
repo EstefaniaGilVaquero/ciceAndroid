@@ -9,10 +9,13 @@ import android.widget.Button;
 
 import android.widget.ImageView;
 
+import java.util.HashMap;
+
 
 public class displayImages extends AppCompatActivity {
 
     Context context;
+    HashMap mapaEleccion = new HashMap();
     //private ImageView imagenBici;
 
     // Array de imagenes
@@ -49,6 +52,11 @@ public class displayImages extends AppCompatActivity {
         ImageView imagenBici = (ImageView) a.findViewById(R.id.bicisView);
         imagenBici.setImageResource(R.drawable.bici_enduro);
        // imagenBici.setImageResource(biciArray[1]);
+
+    }
+
+    public void guardarEleccion(View v){
+        //TODO: Guarda la eleccion del usuario y el id de la foto
 
     }
 
