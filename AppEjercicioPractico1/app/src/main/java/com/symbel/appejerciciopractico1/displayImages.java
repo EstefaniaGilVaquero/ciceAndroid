@@ -16,6 +16,9 @@ public class displayImages extends AppCompatActivity {
 
     Context context;
     HashMap mapaEleccion = new HashMap();
+
+    Integer contadorImagenes = 0;
+
     //private ImageView imagenBici;
 
     // Array de imagenes
@@ -46,13 +49,19 @@ public class displayImages extends AppCompatActivity {
 
     public void nextImgae(){
 
-        //Ya no se que mas hacerrrrrrrrr
         Activity a = (Activity) context;
 
         ImageView imagenBici = (ImageView) a.findViewById(R.id.bicisView);
-        imagenBici.setImageResource(R.drawable.bici_enduro);
-       // imagenBici.setImageResource(biciArray[1]);
 
+        if ( contadorImagenes < biciArray.length){
+            contadorImagenes++;
+
+        }else{
+            contadorImagenes = 0;
+        }
+
+        imagenBici.setImageResource(R.drawable.bici_enduro);
+      //  imagenBici.setImageResource(biciArray[contadorImagenes]);
     }
 
     public void guardarEleccion(View v){
