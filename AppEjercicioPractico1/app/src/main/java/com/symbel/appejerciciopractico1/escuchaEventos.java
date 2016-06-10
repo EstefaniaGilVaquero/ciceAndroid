@@ -31,7 +31,7 @@ public class escuchaEventos implements View.OnClickListener{
             case R.id.OK_BTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton OK de login");
 
-                //Intent para llamar a la actividad siguiente
+                //Intent para llamar a la actividad displayImages
 
                 Intent intent1 = new Intent(context, displayImages.class);
                 Activity a = (Activity) context;

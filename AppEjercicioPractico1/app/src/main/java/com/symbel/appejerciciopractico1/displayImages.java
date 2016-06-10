@@ -46,10 +46,9 @@ public class displayImages extends AppCompatActivity {
         //Ya no se que mas hacerrrrrrrrr
         Activity a = (Activity) context;
 
-
-        ImageView imagenBici = (ImageView) a.findViewById(R.id.imagenesBicis);
+        ImageView imagenBici = (ImageView) a.findViewById(R.id.bicisView);
         imagenBici.setImageResource(R.drawable.bici_enduro);
-
+       // imagenBici.setImageResource(biciArray[1]);
 
     }
 

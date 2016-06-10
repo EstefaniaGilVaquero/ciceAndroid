@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //EJEMPLO 1 ADAPTER
-        /*super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //Array que asociaremos al adaptador
@@ -34,22 +34,22 @@ public class MainActivity extends AppCompatActivity {
 
         //Asociamos el adaptador a la vista.
         ListView lv = (ListView) findViewById(R.id.listacadenas);
-        lv.setAdapter(adaptador);*/
+        lv.setAdapter(adaptador);
 
         //EJEMPLO 2 ADAPTER
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.grid);
-
-        GridView gridview = (GridView) findViewById(R.id.migridview);
-        gridview.setAdapter(new ImagenAdapter(this));
-
-        gridview.setOnItemClickListener (new AdapterView.OnItemClickListener()
-        {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText (MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-            }
-        }
-        );
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.grid);
+//
+//        GridView gridview = (GridView) findViewById(R.id.migridview);
+//        gridview.setAdapter(new ImagenAdapter(this));
+//
+//        gridview.setOnItemClickListener (new AdapterView.OnItemClickListener()
+//        {
+//            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+//                Toast.makeText (MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//        );
 
     }
 }
