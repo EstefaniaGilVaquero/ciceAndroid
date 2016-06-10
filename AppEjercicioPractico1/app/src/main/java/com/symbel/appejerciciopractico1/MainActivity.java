@@ -19,5 +19,7 @@ public class MainActivity extends AppCompatActivity {
         //CAPTURO EL BOTÓN Y LE ASOCIO EL LISTENER
         Button botonOK = (Button)findViewById(R.id.OK_BTN);
         botonOK.setOnClickListener(objetoEscuchador);
+        Button botonBorrar = (Button)findViewById(R.id.borrarBTN);
+        botonBorrar.setOnClickListener(objetoEscuchador);
  }
 }

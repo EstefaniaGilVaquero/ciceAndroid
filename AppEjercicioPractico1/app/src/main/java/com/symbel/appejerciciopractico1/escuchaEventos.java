@@ -13,7 +13,7 @@ public class escuchaEventos implements View.OnClickListener{
 
     Context context;
 
-    displayImages mostrarImagenes;
+    Accion acciones;
 
 
     public escuchaEventos(Context context){this.context = context;}
@@ -25,7 +25,7 @@ public class escuchaEventos implements View.OnClickListener{
         //obtengo el Id de la vista
         int id_vista_seleccionada = vista_seleccioanda.getId();
 
-        //displayImages mostrarImagenes = (displayImages) this.context;
+        //Accion mostrarImagenes = (Accion) this.context;
 
         Log.d(getClass().getCanonicalName(), "Ha pulsado un boton");
 
@@ -34,9 +34,9 @@ public class escuchaEventos implements View.OnClickListener{
             case R.id.OK_BTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton OK de login");
 
-                //Intent para llamar a la actividad displayImages
+                //Intent para llamar a la actividad Accion
 
-                Intent intent1 = new Intent(context, displayImages.class);
+                Intent intent1 = new Intent(context, Accion.class);
                 Activity a = (Activity) context;
                 a.startActivity(intent1);
 
@@ -45,8 +45,8 @@ public class escuchaEventos implements View.OnClickListener{
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton SI");
                 //TODO: Guardar en un map la imagen y la respuesta
                 //mostrarImagenes.guardarEleccion(R.id.siBTN);
-                mostrarImagenes = (displayImages) this.context;
-                mostrarImagenes.nextImgae();
+                acciones = (Accion) this.context;
+                acciones.nextImgae();
 
                 break;
 
@@ -54,8 +54,16 @@ public class escuchaEventos implements View.OnClickListener{
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton NO");
                 //TODO: Guardar en un map la imagen y la respuesta
                 //mostrarImagenes.guardarEleccion(R.id.noBTN);
-                mostrarImagenes = (displayImages) this.context;
-                mostrarImagenes.nextImgae();
+                acciones = (Accion) this.context;
+                acciones.nextImgae();
+                break;
+
+            case R.id.borrarBTN:
+                Log.d(getClass().getCanonicalName(), "Ha pulsado boton BORRAR");
+                //TODO: No funciona
+                acciones = (Accion) this.context;
+                acciones.borrarFormulario();
+
                 break;
 
 

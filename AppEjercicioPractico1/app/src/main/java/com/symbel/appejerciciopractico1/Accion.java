@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.util.HashMap;
 
 
-public class displayImages extends AppCompatActivity {
+public class Accion extends AppCompatActivity {
 
     Context context;
     HashMap mapaEleccion = new HashMap();
@@ -61,9 +62,12 @@ public class displayImages extends AppCompatActivity {
         imagenBici.setImageResource(biciArray[contadorImagenes]);
     }
 
-    public void guardarEleccion(View v){
-        //TODO: Guarda la eleccion del usuario y el id de la foto
+    public void borrarFormulario(){
+        EditText usuarioTF = (EditText) findViewById(R.id.usuarioTF);
+        EditText passwordTF = (EditText) findViewById(R.id.passwordTF);
 
+        usuarioTF.setText(R.string.usuarioTF);
+        passwordTF.setText(R.string.contrasenaTF);
     }
 
 

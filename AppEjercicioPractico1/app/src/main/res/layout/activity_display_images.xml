@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.symbel.appejerciciopractico1.displayImages">
+    tools:context=".Accion">
 
     <ImageView
         android:layout_width="match_parent"
@@ -22,12 +22,14 @@
         android:layout_height="wrap_content"
         android:text="@string/botonSI"
         android:id="@+id/siBTN"
-        android:layout_gravity="left|bottom"/>
+        android:layout_gravity="left|bottom"
+        android:background="@drawable/btn_circle"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/botonNO"
         android:id="@+id/noBTN"
-        android:layout_gravity="right|bottom"/>
+        android:layout_gravity="right|bottom"
+        android:background="@drawable/btn_circle"/>
 </FrameLayout>
