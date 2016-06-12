@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class escuchaEventos implements View.OnClickListener{
 
     Context context;
-    Accion mAccion;
+    DisplayImages mDisplayImages;
     MainActivity mMainActivity;
 
 
@@ -33,37 +33,28 @@ public class escuchaEventos implements View.OnClickListener{
             case R.id.loginBTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton OK de login");
                 mMainActivity = (MainActivity) this.context;
-                //TODO: validar que se ha introducido usuario y contrasena
 
-
+                //Validar que se ha introducido usuario y contrasena validos
                 //Si ha introducido usuario y contrasena
                 if(mMainActivity.validarUsuarioContrasena()){
-                    //TODO: Validar contra BD el usuario y la contrasena
-
-                    //Intent para llamar a la actividad Accion
-                    Intent intent1 = new Intent(context, Accion.class);
+                    //Intent para llamar a la actividad DisplayImages
+                    Intent intent1 = new Intent(context, DisplayImages.class);
                     Activity a = (Activity) context;
                     a.startActivity(intent1);
                 //Si NO ha introducido el usuario o la contrasena
                 }else{
-                    //Mensaje "Introduce usuario y contraseña!!"
-                    Toast toast1 = Toast.makeText(this.context,"introduce usuario y contraseña!!", Toast.LENGTH_SHORT);
+                    //Mensaje "Usuario o Password incorrecto!!"
+                    Toast toast1 = Toast.makeText(this.context,"Usuario o Password incorrecto!!", Toast.LENGTH_SHORT);
                     toast1.show();
                 }
-
-
-
-
-
-
-
                 break;
+
             case R.id.siBTN:
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton SI");
                 //TODO: Guardar en BD la respuesta
 
-                mAccion = (Accion) this.context;
-                mAccion.nextImgae();
+                mDisplayImages = (DisplayImages) this.context;
+                mDisplayImages.nextImgae();
 
                 break;
 
@@ -71,17 +62,16 @@ public class escuchaEventos implements View.OnClickListener{
                 Log.d(getClass().getCanonicalName(), "Ha pulsado boton NO");
                 //TODO: Guardar en BD la respuesta
                 //mostrarImagenes.guardarEleccion(R.id.noBTN);
-                mAccion = (Accion) this.context;
-                mAccion.nextImgae();
+                mDisplayImages = (DisplayImages) this.context;
+                mDisplayImages.nextImgae();
                 break;
 
-//            case R.id.borrarBTN:
-//                Log.d(getClass().getCanonicalName(), "Ha pulsado boton BORRAR");
-//                //TODO: No funciona
-//                acciones = (Accion) this.context;
-//                acciones.borrarFormulario();
-//
-//                break;
+            case R.id.borrarBTN:
+                Log.d(getClass().getCanonicalName(), "Ha pulsado boton BORRAR");
+                mMainActivity = (MainActivity) this.context;
+                mMainActivity.borrarFormulario();
+
+                break;
 
         }
 

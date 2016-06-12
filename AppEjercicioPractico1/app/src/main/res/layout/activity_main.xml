@@ -60,6 +60,7 @@
             android:layout_toLeftOf="@+id/PasswordButton"
             android:background="@null"
             android:layout_centerVertical="true"
+            android:inputType="number"
             android:id="@+id/passwordTF"/>
         <ImageButton
             android:layout_width="wrap_content"

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import java.util.HashMap;
 
 
-public class Accion extends AppCompatActivity {
+public class DisplayImages extends AppCompatActivity {
 
     Context context;
     HashMap mapaEleccion = new HashMap();
@@ -62,14 +62,7 @@ public class Accion extends AppCompatActivity {
         imagenBici.setImageResource(biciArray[contadorImagenes]);
     }
 
-//    public void borrarFormulario(){
-//        EditText usuarioTF = (EditText) findViewById(R.id.usuarioTF);
-//        EditText passwordTF = (EditText) findViewById(R.id.passwordTF);
-//
-//        usuarioTF.setText(R.string.usuarioTF);
-//        passwordTF.setText(R.string.contrasenaTF);
-//    }
-//
+
     public boolean validarUsuarioContrasena(){
 
         boolean validado = false;
