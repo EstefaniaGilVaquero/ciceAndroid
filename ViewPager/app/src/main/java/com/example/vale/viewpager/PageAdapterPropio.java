@@ -38,4 +38,10 @@ public class PageAdapterPropio extends FragmentStatePagerAdapter {
         return 3;
     }
 
+    @Override
+    public CharSequence getPageTitle(int position){
+        return MainActivity.getTitulo(position);
+    }
+
+
 }

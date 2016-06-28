@@ -1,9 +1,11 @@
 package com.example.vale.viewpager;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.widget.TableLayout;
 
 public class MainActivity extends FragmentActivity {
 
@@ -20,6 +22,15 @@ public class MainActivity extends FragmentActivity {
      */
     private PagerAdapter pagerAdapter;
 
+    //Titulo visible para cada fragment
+    private static String[] titulo_tab = {"OPTION 1", "OPTION 2", "OPTION 2"};
+
+    public static String getTitulo (int position){
+        return titulo_tab[position];
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +41,17 @@ public class MainActivity extends FragmentActivity {
         //Y le asigno su adpter
         pagerAdapter = new PageAdapterPropio(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+
+        //Referencia al tablelayout
+        TabLayout tableLayout = (TabLayout) findViewById(R.id.tablay);
+        //Creo dinamicamente los elementos
+        tableLayout.addTab(tableLayout.newTab());
+        tableLayout.addTab(tableLayout.newTab());
+        tableLayout.addTab(tableLayout.newTab());
+
+        //Asociar al viewpager para que cambie al cambiar el susodicho
+        tableLayout.setupWithViewPager(viewPager);
+
     }
 
 
