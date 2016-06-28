@@ -30,10 +30,27 @@ public class FocusListener implements View.OnFocusChangeListener {
 
     private boolean telefonoValido (String telefono)
     {
-        boolean esValido = false;
-        esValido = validarTelefono(telefono);
-        return esValido;
-                //(Patterns.PHONE.matcher(telefono).matches());
+        return Patterns.PHONE.matcher(telefono).matches();
+    }
+
+    public boolean validarDivisible(String telefono){
+        int largo=telefono.length(), sum=0;
+        boolean valido = false;
+
+        for(int i=0; i<largo; i++){
+            Character character = telefono.charAt(i);
+            if (Character.isDigit(character)){
+                sum += Integer.parseInt(String.valueOf(character));
+            }
+        }
+
+        if ((sum % 2) == 0){
+            valido = true;
+        }
+
+        System.out.println(" Cadena es: " +  telefono);
+        System.out.println(" suma es: " +  sum);
+        return valido;
     }
 
     @Override
@@ -56,29 +73,17 @@ public class FocusListener implements View.OnFocusChangeListener {
                         TextInputLayout wrapmail = (TextInputLayout) actividad.findViewById(R.id.tilcajatelf);
                         wrapmail.setError("Suma no multiplo de 2");
                     }
+
+                    if (!validarDivisible(telefonoIntroducido)) {
+                        TextInputLayout wrapmail = (TextInputLayout) actividad.findViewById(R.id.tilcajatelf);
+                        wrapmail.setError("Telefono no Valido");
+                    }
                     break;
             }
         }
     }
 
 
-    public boolean validarTelefono(String telefono){
-        int largo=telefono.length(), sum=0;
-        boolean valido = false;
 
-        for(int i=0; i<largo; i++){
-            Character character = telefono.charAt(i);
-            if (Character.isDigit(character)){
-                sum = sum + Integer.parseInt(String.valueOf(character));
-            }
-        }
-        if ((sum % 2) == 0){
-            valido = true;
-        }
-
-        System.out.println(" Cadena es: " +  telefono);
-        System.out.println(" suma es: " +  sum);
-        return valido;
-    }
 
 }
