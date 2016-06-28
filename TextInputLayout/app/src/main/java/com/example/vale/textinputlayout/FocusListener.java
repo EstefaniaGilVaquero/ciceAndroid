@@ -69,12 +69,12 @@ public class FocusListener implements View.OnFocusChangeListener {
                     String telefonoIntroducido = cajatextotelefono.getText().toString();
                     if (!telefonoValido(telefonoIntroducido)) {
                         TextInputLayout wrapmail = (TextInputLayout) actividad.findViewById(R.id.tilcajatelf);
-                        wrapmail.setError("Suma no multiplo de 2");
+                        wrapmail.setError("Telefono no valido");
                     }
 
                     if (!validarDivisible(telefonoIntroducido)) {
                         TextInputLayout wrapmail = (TextInputLayout) actividad.findViewById(R.id.tilcajatelf);
-                        wrapmail.setError("Telefono no Valido");
+                        wrapmail.setError("Suma no multiplo de 2");
                     }
                     break;
             }
