@@ -39,9 +39,7 @@ public class FocusListener implements View.OnFocusChangeListener {
 
         for(int i=0; i<largo; i++){
             Character character = telefono.charAt(i);
-            if (Character.isDigit(character)){
-                sum += Integer.parseInt(String.valueOf(character));
-            }
+            sum += Integer.parseInt(String.valueOf(character));
         }
 
         if ((sum % 2) == 0){
