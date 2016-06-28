@@ -22,9 +22,22 @@ public class BaseDatosCochesPersona extends SQLiteOpenHelper {
 
     private final String sqlCreacionTablaCoches = "CREATE TABLE COCHE (id INTEGER PRIMARY KEY AUTOINCREMENT, modelo TEXT, idpersona INTEGER, FOREIGN KEY (idpersona) REFERENCES PERSONA (id))";
 
+    //Si el constructor publico, desde otras clases puedo crear muchas instancias de esta BD.
+    //Esto no es muy optimo, es mejor implementar el patron singleton
+//    public BaseDatosCochesPersona(Context contexto, String nombre, SQLiteDatabase.CursorFactory factory, int version) {
+//        super(contexto, nombre, factory, version); //el método padre, llamará a Oncreate o OnUpgrade, segn corresponda
+//    }
+
+    private static BaseDatosCochesPersona baseDatosCochesPersona = new BaseDatosCochesPersona(this, "MiDB", null, 1);
+
     public BaseDatosCochesPersona(Context contexto, String nombre, SQLiteDatabase.CursorFactory factory, int version) {
         super(contexto, nombre, factory, version); //el método padre, llamará a Oncreate o OnUpgrade, segn corresponda
     }
+
+    public static BaseDatosCochesPersona obtenerInstancia(){
+        return baseDatosCochesPersona;
+    }
+
 
     @Override
     public void onCreate(SQLiteDatabase db)

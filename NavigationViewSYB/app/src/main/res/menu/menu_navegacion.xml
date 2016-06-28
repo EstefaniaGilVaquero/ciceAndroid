@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_1"
+            android:icon="@drawable/ic_navigate_next_black_48dp"
+            android:title="Quiz"/>
+        <item
+            android:id="@+id/menu_seccion_2"
+            android:icon="@drawable/ic_navigate_next_black_48dp"
+            android:title="Mapas"/>
+
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Ranking">
+        <menu>
+            <item
+                android:id="@+id/menu_opcion_1"
+                android:icon="@drawable/ic_navigate_next_black_48dp"
+                android:title="Individual"/>
+            <item
+                android:id="@+id/menu_opcion_2"
+                android:icon="@drawable/ic_navigate_next_black_48dp"
+                android:title="Equipo"/>
+        </menu>
+    </item>
+</menu>

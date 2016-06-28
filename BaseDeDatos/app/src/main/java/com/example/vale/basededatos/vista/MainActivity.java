@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //creo el objeto de la base de datos
-        BaseDatosCochesPersona baseDatosCochesPersona = new BaseDatosCochesPersona(this, "MiDB", null, 1);
+        BaseDatosCochesPersona baseDatosCochesPersona = BaseDatosCochesPersona.obtenerInstancia();
 
         Persona persona1 = new Persona(1, "Juan");
         Persona persona2 = new Persona(2, "Conchi");
