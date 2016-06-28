@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 public class ActividadPrincipal extends AppCompatActivity //Importantísimo. Esta actividad soporta fragments
-        implements FragmentListado.LibrosListener {
+ {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,6 @@ public class ActividadPrincipal extends AppCompatActivity //Importantísimo. Est
     }
 
 
-    @Override
     public void onLibroSeleccionado(Libro c) {
 
         FragmentManager fm = getSupportFragmentManager();

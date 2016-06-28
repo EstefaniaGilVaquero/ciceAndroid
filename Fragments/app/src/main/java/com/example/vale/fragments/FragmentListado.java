@@ -24,7 +24,7 @@ public class FragmentListado extends Fragment {
 	
 	private ListView lstListado;
 	
-	private LibrosListener listener;
+	private ActividadPrincipal listener;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,
@@ -40,24 +40,22 @@ public class FragmentListado extends Fragment {
 		
 		lstListado = (ListView)getView().findViewById(R.id.LstListado);
 		
-		lstListado.setAdapter(new AdaptadorLibros(this));
+		lstListado.setAdapter(new AdaptadorCorreos(this));
 		
 		lstListado.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> list, View view, int pos, long id) {
-				if (listener!=null) {
-					listener.onLibroSeleccionado(
-							(Libro)lstListado.getAdapter().getItem(pos));
-				}
+					listener.onLibroSeleccionado(datos[pos]);
+
 			}
 		});
 	}
 	
-	class AdaptadorLibros extends ArrayAdapter<Libro> {
+	class AdaptadorCorreos extends ArrayAdapter<Libro> {
     	
     	Activity context;
-
-		AdaptadorLibros(Fragment context)
+    	
+    	AdaptadorCorreos(Fragment context)
         {
     		super(context.getActivity(), R.layout.listitem_libro, datos);
     		this.context = context.getActivity();
@@ -77,11 +75,8 @@ public class FragmentListado extends Fragment {
 		}
     }
 	
-	public interface LibrosListener {
-		void onLibroSeleccionado(Libro c);
-	}
-	
-	public void setLibrosListener(LibrosListener listener) {
+
+	public void setLibrosListener (ActividadPrincipal listener) {
 		this.listener=listener;
 	}
 }
