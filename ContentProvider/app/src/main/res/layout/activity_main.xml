@@ -13,5 +13,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Hello World!"
+        android:layout_marginTop="43dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_marginTop="88dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce el nombre del contacto"
+        android:id="@+id/textView2"
+        android:layout_marginTop="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

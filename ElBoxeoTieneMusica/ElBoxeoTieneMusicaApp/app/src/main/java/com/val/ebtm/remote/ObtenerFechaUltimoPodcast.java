@@ -32,7 +32,11 @@ public class ObtenerFechaUltimoPodcast extends AsyncTask<Void, Integer, String> 
 			{
 			
 				Log.d(this.getClass().getCanonicalName(), "Llamado a ObtenerFechaUltimo");
-				URL serverUrl = new URL("http://ebtm-ebtm.rhcloud.com/RadioMarcaServer/ObtenerFechaUltimo");
+				//URL serverUrl = new URL("http://ebtm-ebtm.rhcloud.com/RadioMarcaServer/ObtenerFechaUltimo");
+				//http://172.31.248.80:8080/RadioMarcaServer/
+
+
+				URL serverUrl = new URL("http://172.31.248.80:8080/RadioMarcaServer/ListarPodcastsDisponibles");
 				HttpURLConnection httpCon = (HttpURLConnection) serverUrl.openConnection();
 
                 if (httpCon.getResponseCode() == HttpURLConnection.HTTP_OK)
