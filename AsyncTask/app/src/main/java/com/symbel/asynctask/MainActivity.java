@@ -1,32 +1,31 @@
 package com.symbel.asynctask;
 
+
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 
-import java.util.concurrent.ExecutionException;
+
 
 public class MainActivity extends AppCompatActivity {
-    private TextView textview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(getClass().getCanonicalName(), "oncreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textview = (TextView) findViewById(R.id.textView);
-        String mensaje = null;
-        try {
-            mensaje = new ObtenerSaludoRemoto().execute().get();
-            if (null!=mensaje){
-                Log.d(getClass().getCanonicalName(), "uf no hay mensaje");
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
+        if(UtilInternet.isNetworkAvailable(this)){
+            Log.d(getClass().getCanonicalName(), "SI HAY INTERNET");
+            new ObtenerPersona().execute("Paco");
+        }else{
+            Log.d(getClass().getCanonicalName(), "NO HAY INTERNET");
+            FragmentManager fm = this.getFragmentManager();
+            DialogFragment dialogo = new DialogFragment();
+            dialogo.show(fm, "aviso");
         }
-        textview.setText(mensaje);
     }
+
 }

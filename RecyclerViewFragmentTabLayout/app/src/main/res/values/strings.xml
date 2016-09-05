@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerViewFragmentTabLayout</string>
+    <string name="title_activity_base_fragment">BaseFragment</string>
+</resources>

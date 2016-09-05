@@ -21,11 +21,11 @@ public class Calculo extends AsyncTask<String,Void,Bitmap> {
     private Context contextm;
     private Bitmap bitmap;
     private long tiempoInicial;
-    private long tiempoFinal;
+    public static long tiempoFinal;
 
-    public Calculo(Context context) {
+  /*  public Calculo(Context context) {
         this.contextm = context;
-    }
+    }*/
 
     protected Bitmap doInBackground(String... params) {
       //  Calendar calendar_actual = Calendar.getInstance();
@@ -46,20 +46,21 @@ public class Calculo extends AsyncTask<String,Void,Bitmap> {
         Log.d(getClass().getCanonicalName(), "tiempo: " + tiempoFinal);
         //Calculamos los mb por segundo
         //TODO: No funciona
-        Integer tamanoBitMap = bitmap.getByteCount()/1024;
-     //   tiempoFinal = (tamanoBitMap.longValue() / (tiempoFinal/1000));
+      //  Integer tamanoBitMap = bitmap.getByteCount()/1024;
+     //  tiempoFinal = (tamanoBitMap.longValue() / (tiempoFinal/1000));
+
 
         return bitmap;
 
     }
 
 
-    @Override
-    public void onPostExecute(Bitmap bitmap) {
-        super.onPostExecute(bitmap);
-        MainActivity mainActivity = (MainActivity) contextm;
-        mainActivity.pintarResultado(bitmap,tiempoFinal);
-    }
+//    @Override
+//    public void onPostExecute(Bitmap bitmap) {
+//        super.onPostExecute(bitmap);
+//        MainActivity mainActivity = (MainActivity) contextm;
+//        mainActivity.pintarResultado(bitmap,tiempoFinal);
+//    }
 
 
 
