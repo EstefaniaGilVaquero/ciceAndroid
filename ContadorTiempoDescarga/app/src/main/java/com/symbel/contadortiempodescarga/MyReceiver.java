@@ -25,6 +25,8 @@ public class MyReceiver extends BroadcastReceiver {
         //Intent de llamada a la actividad detalle
         Intent intent2 = new Intent(context,Main2Activity.class);
 
+        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         //Metemos datos en el intent
         intent2.putExtra("TIME", time);
         intent2.putExtra("BITMAP", this.img_zip);

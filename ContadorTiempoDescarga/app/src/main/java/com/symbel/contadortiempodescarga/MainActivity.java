@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("SERVICIO_TERMINADO");
 
-        MyReciever br = new MyReciever(this);
+        MyReceiver br = new MyReceiver();
         registerReceiver(br, intentFilter);
 
     }

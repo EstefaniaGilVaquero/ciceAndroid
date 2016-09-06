@@ -57,7 +57,7 @@ public class MyService extends Service {
 
         byte[] fotoArray = comprimirBitMap(bitmap);
 
-        intent_reciver.putExtra("BITMAP", bitmap);
+        intent_reciver.putExtra("BITMAP", fotoArray);
         sendBroadcast(intent_reciver);
     }
 }
