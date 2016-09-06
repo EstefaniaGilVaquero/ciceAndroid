@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.io.ByteArrayOutputStream;
 import java.util.concurrent.ExecutionException;
 
 public class MyService extends Service {
@@ -39,7 +40,13 @@ public class MyService extends Service {
         return Service.START_REDELIVER_INTENT; //Si el servicio se destruye se reinicia el intent original
     }
 
-
+    private byte [] comprimirBitMap(Bitmap bitmap){
+        byte [] imag_zip;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        imag_zip = baos.toByteArray();
+        return imag_zip;
+    }
 
     @Override
     public void onDestroy() {
@@ -47,6 +54,9 @@ public class MyService extends Service {
 
         Intent intent_reciver = new Intent("SERVICIO_TERMINADO");
         intent_reciver.putExtra("TIME", calculo.getTiempoFinal());
+
+        byte[] fotoArray = comprimirBitMap(bitmap);
+
         intent_reciver.putExtra("BITMAP", bitmap);
         sendBroadcast(intent_reciver);
     }
