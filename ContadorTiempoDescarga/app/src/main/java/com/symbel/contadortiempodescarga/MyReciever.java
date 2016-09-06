@@ -9,11 +9,11 @@ import android.util.Log;
 /**
  * Created by estefi on 02/09/2016.
  */
-public class Reciever extends BroadcastReceiver {
+public class MyReciever extends BroadcastReceiver {
 
     private Context context;
 
-    public Reciever(Context context) {
+    public MyReciever(Context context) {
 
         this.context = context;
     }

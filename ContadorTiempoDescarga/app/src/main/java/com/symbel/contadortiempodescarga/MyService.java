@@ -11,7 +11,8 @@ import java.util.concurrent.ExecutionException;
 
 public class MyService extends Service {
 
-    private static Bitmap bitmap = null;
+    private Bitmap bitmap = null;
+    private Calculo calculo;
 
     public MyService() {
     }
@@ -25,7 +26,7 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        Calculo calculo = new Calculo();
+        calculo = new Calculo();
         try {
             bitmap = calculo.execute(MainActivity.mURL).get();
             stopSelf();//finalizo
@@ -45,7 +46,7 @@ public class MyService extends Service {
         super.onDestroy();
 
         Intent intent_reciver = new Intent("SERVICIO_TERMINADO");
-        intent_reciver.putExtra("TIME", Calculo.tiempoFinal);
+        intent_reciver.putExtra("TIME", calculo.getTiempoFinal());
         intent_reciver.putExtra("BITMAP", bitmap);
         sendBroadcast(intent_reciver);
     }

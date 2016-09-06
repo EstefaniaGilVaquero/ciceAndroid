@@ -21,7 +21,12 @@ public class Calculo extends AsyncTask<String,Void,Bitmap> {
     private Context contextm;
     private Bitmap bitmap;
     private long tiempoInicial;
-    public static long tiempoFinal;
+
+    public long getTiempoFinal() {
+        return tiempoFinal;
+    }
+
+    private long tiempoFinal;
 
   /*  public Calculo(Context context) {
         this.contextm = context;

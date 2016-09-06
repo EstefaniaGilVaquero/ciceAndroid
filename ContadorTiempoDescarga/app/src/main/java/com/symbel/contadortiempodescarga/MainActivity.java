@@ -1,19 +1,12 @@
 package com.symbel.contadortiempodescarga;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.net.URL;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("SERVICIO_TERMINADO");
 
-        Reciever br = new Reciever(this);
+        MyReciever br = new MyReciever(this);
         registerReceiver(br, intentFilter);
 
     }
@@ -54,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
     }
 
-    public static void pintarResultado(Bitmap imagen, long tiempo){
-
-        textoTiempo.setText(Long.toString(tiempo));
-        imageView.setImageBitmap(imagen);
-    }
+//    public static void pintarResultado(Bitmap imagen, long tiempo){
+//
+//        textoTiempo.setText(Long.toString(tiempo));
+//        imageView.setImageBitmap(imagen);
+//    }
 }
