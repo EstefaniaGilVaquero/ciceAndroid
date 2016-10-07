@@ -1,0 +1,21 @@
+package com.symbel.appsubactivitystartactivityforresult;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class SubActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ub);
+
+        Intent intent = new Intent();
+        intent.putExtra("ALUMNOS","CARLOSANDSTEFI");
+
+        setResult(RESULT_OK, intent);
+
+        finish();
+    }
+}

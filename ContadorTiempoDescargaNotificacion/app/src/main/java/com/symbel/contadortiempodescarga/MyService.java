@@ -1,8 +1,10 @@
 package com.symbel.contadortiempodescarga;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.IBinder;
 import android.util.Log;
@@ -53,8 +55,12 @@ public class MyService extends Service {
     public void onDestroy() {
         super.onDestroy();
 
+        Long tiempoFinal;
+
         Intent intent_reciver = new Intent("SERVICIO_TERMINADO");
-        intent_reciver.putExtra("TIME", calculo.getTiempoFinal());
+        tiempoFinal = calculo.getTiempoFinal();
+        intent_reciver.putExtra("TIME", tiempoFinal);
+
 
         //Para poder pasar un bitmap por un intent hay que comprimir la imagen
 

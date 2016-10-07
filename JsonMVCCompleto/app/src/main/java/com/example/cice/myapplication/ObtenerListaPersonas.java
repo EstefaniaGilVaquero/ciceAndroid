@@ -36,15 +36,11 @@ public class ObtenerListaPersonas extends AsyncTask <Void, Void, List<Persona>> 
         List<Persona> l_personas = null;
         HttpURLConnection httpURLConnection = null;
 
-
-
         try
         {
-
             URL url = new URL ("http://192.168.3.11:8080/CICERemote/SubirPersona");
             httpURLConnection = (HttpURLConnection)url.openConnection();
             httpURLConnection.setRequestMethod("GET");
-
 
             int code_resp = httpURLConnection.getResponseCode();
 
@@ -59,29 +55,19 @@ public class ObtenerListaPersonas extends AsyncTask <Void, Void, List<Persona>> 
                 Gson gson = new Gson();
 
                 l_personas = gson.fromJson (json_personas, new TypeToken<ArrayList<Persona>>(){}.getType());
-
-
             }
 
             httpURLConnection.disconnect();
 
-
-
         } catch (Throwable t)
         {
             Log.e(getClass().getCanonicalName(), "HA ido mal la com con el server", t);
-
         }
 
         finally//haya habido o no excepción, te metes por aquí, para liberar recursos
         {
-
-
             httpURLConnection.disconnect();
-
         }
-
-
 
         return  l_personas;
     }

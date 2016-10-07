@@ -1,7 +1,9 @@
 package com.symbel.contadortiempodescarga;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void inicializarContador(){
+        SharedPreferences prefs = this.getSharedPreferences("contador", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("nVeces",0);
+        editor.commit();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
         textoTiempo = (TextView) findViewById(R.id.textView);
         imageView = (ImageView) findViewById(R.id.imageView);
+
+        inicializarContador();
     }
 
 //    public static void pintarResultado(Bitmap imagen, long tiempo){

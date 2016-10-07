@@ -6,12 +6,16 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.content.SharedPreferences;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
     public class MyReceiver extends BroadcastReceiver {
     private Context context;
+
+        public MyReceiver(){
+
+        }
 
     public MyReceiver(Context context) {
         this.context = context;
@@ -38,8 +42,6 @@ import android.util.Log;
         resultIntent.putExtra("TIME", time);
         resultIntent.putExtra("BITMAP", img_zip);
 
-
-
         PendingIntent resultPendingIntent = PendingIntent.getActivity (context, (int) System.currentTimeMillis(), resultIntent, PendingIntent.FLAG_ONE_SHOT);
 
         mBuilder.setContentIntent(resultPendingIntent);
@@ -48,15 +50,31 @@ import android.util.Log;
 
     }
 
+        private boolean heLlegadoA10(Context context){
+
+            Boolean llego = false;
+
+            SharedPreferences prefs = context.getSharedPreferences("Descargas", Context.MODE_PRIVATE);
+
+            //Recupero las preferencias guardadas
+            int nVeces = prefs.getInt("nVeces", -5);
+            if (nVeces >= 10){
+                llego = true;
+            }
+            return llego;
+        }
+
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(getClass().getCanonicalName(), "Me han llamado desde un service!");
 
+        if (heLlegadoA10(context)){
+            lanzarNotificacion("La imagen se ha descargado fenomenal", intent);
+        }else{
+            //Actualizar contador y llamar de nuevo al servicio
+        }
 
 
-
-
-        lanzarNotificacion("La imagen se ha descargado fenomenal", intent);
 
     }
 }

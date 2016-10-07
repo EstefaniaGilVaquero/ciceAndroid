@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_4cbe3c0802c2580583a7e0c9438f0f38150ff46f\classes.dex" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_5a7eb2e7463f2640251daca6e583ff187a9e459d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\estefi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_c31db23d5352f7eeedcf311d49a5959bdb4ec3d0\classes.dex" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2052df6270fc98dda0b3aefbdbf665963424c4fb">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5f084cc7a8d3c19b7c5f5145028fd27760638ba7\classes.dex" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c23002a72976b58bd136784a0bf5767c76226ac3">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fca12acaa553905ed77f20289f3c589098041152\classes.dex" />
+    </item>
+    <item
+        jar="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\workspaces\androidWorkspace\ciceAndroid\AndroidForegroundServiceExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_17ead89604692d9e9823567b61dd3f0e68a257e9\classes.dex" />
+    </item>
+
+</items>
